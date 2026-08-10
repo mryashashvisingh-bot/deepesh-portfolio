@@ -1,0 +1,6 @@
+# Generated static build output
+/dist/
+
+# Dependencies and local environment
+/node_modules/
+.DS_Store
