@@ -113,6 +113,9 @@ const images = [
 
   // ---- Phase 4: media-proportion correction pass — Metal third screen ----
   { src: lib('04_Freelance/Metal/second.jpg'), slug: 'metal-second', widths: [420] },
+
+  // ---- Phase 5: project composition refinement — GeM fourth supporting image ----
+  { src: lib('03_Digitalabs/GeM/274720314_2935571260067565_7163978631895211480_n.jpg'), slug: 'gem-selfhelp', widths: [500] },
 ];
 
 const posters = [
@@ -136,6 +139,11 @@ const posters = [
   { src: lib('03_Digitalabs/Maate/Maate-1.mp4'), slug: 'maate-brand', atSeconds: 4, width: 700 },
   { src: lib('03_Digitalabs/Maate/Maate-2.mp4'), slug: 'maate-social', atSeconds: 1, width: 420 },
   { src: lib('04_Freelance/Moh_Zewar/PreferredOne.mp4'), slug: 'moh-zewar-motion', atSeconds: 6, width: 700 },
+
+  // ---- Phase 5: project composition refinement — Smaaash reels + Lone Wolf video ----
+  { src: lib('03_Digitalabs/Smaaash/Go_Smaaash.mp4'), slug: 'smaaash-reel1', atSeconds: 3, width: 300 },
+  { src: lib('03_Digitalabs/Smaaash/Go_Smaaash_2.mp4'), slug: 'smaaash-reel2', atSeconds: 3, width: 300 },
+  { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf.mp4'), slug: 'lone-wolf', atSeconds: 3, width: 560 },
 ];
 
 const clips = [
@@ -152,6 +160,11 @@ const clips = [
   { src: lib('03_Digitalabs/Maate/Maate-1.mp4'), slug: 'maate-brand', width: 700 },
   { src: lib('03_Digitalabs/Maate/Maate-2.mp4'), slug: 'maate-social', width: 420 },
   { src: lib('04_Freelance/Moh_Zewar/PreferredOne.mp4'), slug: 'moh-zewar-motion', width: 700 },
+
+  // ---- Phase 5: project composition refinement — Smaaash reels + Lone Wolf video ----
+  { src: lib('03_Digitalabs/Smaaash/Go_Smaaash.mp4'), slug: 'smaaash-reel1', width: 300 },
+  { src: lib('03_Digitalabs/Smaaash/Go_Smaaash_2.mp4'), slug: 'smaaash-reel2', width: 300 },
+  { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf.mp4'), slug: 'lone-wolf', width: 560 },
 ];
 
 for (const item of images) deriveImage(item);
