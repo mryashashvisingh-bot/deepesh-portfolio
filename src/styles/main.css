@@ -287,7 +287,7 @@ p { margin: 0; }
 
 /* ---------- SHERU case study: journey rail, term strip, documentary diptych, reveal ---------- */
 .case-progress {
-  display: flex; flex-wrap: wrap; margin: 2.4rem 0 0;
+  display: flex; flex-wrap: wrap; margin-top: 2.4rem;
   border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);
 }
 .case-progress a {
@@ -306,9 +306,13 @@ p { margin: 0; }
 .term-strip li:last-child { border-right: 0; }
 .term-strip strong { color: var(--accent-2); font-family: var(--mono); margin-right: .45em; }
 
-.doc-diptych { display: flex; flex-wrap: wrap; gap: clamp(1.3rem, 3vw, 2.2rem); align-items: flex-end; margin-top: 2rem; }
-.doc-diptych figure { position: relative; flex: 1 1 280px; max-width: 460px; border: 1px solid var(--line-soft); padding: .6rem; background: var(--panel); }
-.doc-diptych img { width: 100%; height: auto; display: block; }
+/* Documentary diptych: both figures share one controlled HEIGHT (front is portrait, rear is
+   near-square, so equal width would otherwise give them very different displayed heights). Width
+   stays intrinsic to each image's own aspect ratio — nothing is ever stretched or cropped. */
+.doc-diptych { display: flex; flex-wrap: wrap; gap: clamp(1.3rem, 3vw, 2.2rem); align-items: flex-start; margin-top: 2rem; }
+.doc-diptych figure { position: relative; flex: 0 0 auto; display: flex; flex-direction: column; border: 1px solid var(--line-soft); padding: .6rem; background: var(--panel); }
+.doc-diptych__media { height: clamp(280px, 34vw, 460px); display: flex; align-items: center; justify-content: center; }
+.doc-diptych__media img { height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; }
 .doc-diptych .fig-badge {
   position: absolute; top: 1.1rem; left: 1.1rem; z-index: 1;
   background: rgba(13, 13, 11, .74); padding: .35rem .6rem; backdrop-filter: blur(4px);
@@ -322,6 +326,8 @@ p { margin: 0; }
   .case-progress a { flex: 0 0 auto; }
   .doc-diptych { align-items: stretch; }
   .doc-diptych figure { flex-basis: 100%; max-width: 420px; margin-inline: auto; }
+  .doc-diptych__media { height: auto; }
+  .doc-diptych__media img { height: auto; width: 100%; }
   .reveal-figure img { max-height: 420px; }
 }
 
