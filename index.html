@@ -31,7 +31,7 @@
           <a href="#about">About</a>
           <a href="#experiments">Experiments</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="./assets/resume/deepesh-singh-resume-placeholder.pdf" aria-label="Resume placeholder PDF">Resume</a>
+          <a class="nav-cta" href="./assets/resume/deepesh-singh-resume-placeholder.pdf" aria-label="Resume PDF">Resume</a>
         </div>
       </nav>
     </header>
@@ -168,8 +168,11 @@
 
         <div class="subsection" data-reveal>
           <div class="subsection__head"><h3>GeM</h3><span>Government e-Marketplace · Social &amp; campaign communication</span></div>
+          <figure style="max-width:640px; margin-bottom:1.6rem;">
+            <img src="./assets/derived/gem-saras-900.webp" alt="GeM Green Gold Collection post featuring a bamboo artisan" loading="lazy" width="900" height="900" />
+            <figcaption>Green Gold Collection — artisan campaign</figcaption>
+          </figure>
           <div class="spread-c">
-            <figure class="exhibit"><img src="./assets/derived/gem-saras-900.webp" alt="GeM Green Gold Collection post featuring a bamboo artisan" loading="lazy" width="900" height="900" /><figcaption>Green Gold Collection — artisan campaign</figcaption></figure>
             <figure class="exhibit"><img src="./assets/derived/gem-bamboo-500.webp" alt="GeM bamboo products campaign post for rural economy" loading="lazy" width="500" height="500" /><figcaption>Bamboo products — rural economy</figcaption></figure>
             <figure class="exhibit"><img src="./assets/derived/gem-blood-donor-500.webp" alt="GeM World Blood Donor Day awareness post" loading="lazy" width="500" height="500" /><figcaption>World Blood Donor Day</figcaption></figure>
             <figure class="exhibit"><img src="./assets/derived/gem-navy-500.webp" alt="GeM Indian Navy Day awareness post" loading="lazy" width="500" height="500" /><figcaption>Indian Navy Day</figcaption></figure>
@@ -243,6 +246,7 @@
         <!-- Buzzies — feature: strongest still hook -->
         <div class="subsection" data-reveal style="border-top:0; padding-top:0; margin-top:0;">
           <div class="subsection__head"><h3>Buzzies</h3><span>India's Buzziest Brands · Awards invitation &amp; 3D title sequence</span></div>
+          <p style="max-width:56ch; color:var(--muted); margin-bottom:1.3rem;">India's Buzziest Brands recognises the country's most talked-about brands of the year. Designed the awards invitation and the 3D honeycomb title sequence that opened the award-night presentation.</p>
           <div class="spread-b">
             <figure class="spread-b__primary"><img src="./assets/derived/afaqs-buzzies-420.webp" alt="Buzzies — India's Buzziest Brands awards invitation" loading="lazy" width="420" height="539" /><figcaption>Awards invitation</figcaption></figure>
             <figure class="spread-b__secondary">
@@ -257,6 +261,7 @@
         <!-- Digipub — motion feature: strongest video across all four properties -->
         <div class="subsection" data-reveal>
           <div class="subsection__head"><h3>Digipub</h3><span>Digipub Awards · Cinematic 3D motion film</span></div>
+          <p style="max-width:56ch; color:var(--muted); margin-bottom:1.3rem;">Digipub Awards is afaqs!'s awards program for India's digital publishing industry. This fully 3D-animated film — a city flythrough that resolves into a trophy reveal — opened the award-night presentation.</p>
           <figure style="max-width:900px; margin-inline:auto;">
             <video controls preload="none" poster="./assets/derived/afaqs-digipub-poster-900.webp" width="900" height="506" style="width:100%; height:auto; background:#000;">
               <source src="./assets/derived/afaqs-digipub-clip.mp4" type="video/mp4" />
@@ -271,6 +276,7 @@
         <!-- Foxglove — still + video share one illustrated identity -->
         <div class="subsection" data-reveal>
           <div class="subsection__head"><h3>Foxglove</h3><span>Foxglove Awards · Low-poly 3D explainer &amp; matching identity</span></div>
+          <p style="max-width:56ch; color:var(--muted); margin-bottom:1.3rem;">The Foxglove Awards celebrate craft and innovation in Indian advertising. Designed the low-poly 3D explainer film and the matching call-for-entries identity.</p>
           <div class="spread-b">
             <figure class="spread-b__primary">
               <video controls preload="none" poster="./assets/derived/afaqs-foxglove-poster-700.webp" width="700" height="394" style="width:100%; height:auto; background:#000;">
@@ -285,6 +291,7 @@
         <!-- VDONXT — video-led, closes on scale/breadth -->
         <div class="subsection" data-reveal>
           <div class="subsection__head"><h3>VDONXT</h3><span>vdonxt Asia Awards · Broadcast promo, powered by Viu</span></div>
+          <p style="max-width:56ch; color:var(--muted); margin-bottom:1.3rem;">vdonxt Asia is afaqs!'s broadcast and streaming industry awards property, presented with Adobe. Designed the visual communication and motion content for this broadcast promo.</p>
           <figure style="max-width:640px;">
             <video controls preload="none" poster="./assets/derived/afaqs-vdonxt-poster-700.webp" width="700" height="394" style="width:100%; height:auto; background:#000;">
               <source src="./assets/derived/afaqs-vdonxt-clip.mp4" type="video/mp4" />
@@ -376,7 +383,10 @@
         </div>
         <div data-reveal data-reveal-delay="1" style="max-width:60ch;">
           <p>SHERU is the main current experiment, supported by lightweight explorations across AI-assisted visual exploration, creative technology, interaction experiments, robotics, motion experiments and visual systems.</p>
-          <a class="button button--ghost" href="./sheru.html" style="margin-top:1.2rem;">Read the SHERU case study</a>
+          <ul class="tag-list">
+            <li>AI-Assisted Visuals</li><li>Robotics</li><li>Interaction</li><li>Creative Technology</li><li>Motion Experiments</li><li>Visual Systems</li>
+          </ul>
+          <a class="button button--ghost" href="./sheru.html" style="margin-top:.6rem;">Read the SHERU case study</a>
         </div>
       </section>
 
@@ -384,12 +394,11 @@
       <section class="contact container" id="contact" aria-labelledby="contact-title">
         <span class="kicker">Contact</span>
         <h2 id="contact-title">Let's build something meaningful.</h2>
-        <p style="margin-top:.8rem; color:var(--muted);">Available for senior design, creative leadership, brand, AI/product and international remote opportunities.</p>
+        <p class="lede" style="margin-top:.9rem; color:var(--muted);">Available for senior design, creative leadership, brand, AI/product and international remote opportunities.</p>
         <div class="contact-links">
-          <a href="mailto:email-placeholder@example.com">Email placeholder</a>
-          <a href="#">LinkedIn placeholder</a>
-          <a href="#">Behance placeholder</a>
-          <a href="./assets/resume/deepesh-singh-resume-placeholder.pdf">Resume placeholder</a>
+          <a href="mailto:singh27deepesh@gmail.com">Email<span>singh27deepesh@gmail.com</span></a>
+          <a href="https://www.linkedin.com/in/deepesh-singh-860a5a91" target="_blank" rel="noopener noreferrer">LinkedIn<span>Profile ↗</span></a>
+          <a href="./assets/resume/deepesh-singh-resume-placeholder.pdf">Resume<span>PDF</span></a>
         </div>
       </section>
 
@@ -402,9 +411,8 @@
         <p>Building brands, visual experiences &amp; intelligent products.</p>
       </div>
       <div>
-        <a href="#">LinkedIn</a>
-        <a href="#">Behance</a>
-        <a href="mailto:email-placeholder@example.com">Email</a>
+        <a href="https://www.linkedin.com/in/deepesh-singh-860a5a91" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:singh27deepesh@gmail.com">Email</a>
       </div>
     </footer>
   </body>
