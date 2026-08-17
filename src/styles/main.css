@@ -433,16 +433,22 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
   .spread-f__hero img, .spread-f__hero video { width: 100%; height: auto; }
   .spread-f__grid { width: 100%; }
   .split { grid-template-columns: 1fr; }
+
+  /* C/D: exhibit strip & quiet-card media are height-driven on desktop (a row of
+     items sharing one height, each keeping its own intrinsic width). On a narrow
+     viewport that leaves every item small with wasted space beside it, so switch
+     to the same principle already used above for spread-f (GeM/Lone Wolf): a
+     full-width vertical stack, width-driven with auto height. */
+  .spread-c { flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
+  .exhibit { width: 100%; }
+  .exhibit__media { height: auto; }
+  .exhibit__media img, .exhibit__media video { width: 100%; height: auto; }
+  .quiet-card__media { height: auto; }
+  .quiet-card__media img { width: 100%; height: auto; }
 }
 
 @media (max-width: 480px) {
   h1 { font-size: clamp(3rem, 16vw, 4.4rem); }
-  .exhibit__media { height: clamp(120px, 34vw, 170px); }
-  .spread-c--duo .exhibit__media { height: clamp(130px, 34vw, 180px); }
-  .spread-c--trio .exhibit__media { height: clamp(120px, 30vw, 160px); }
-  .spread-c--trio-wide .exhibit__media { height: clamp(90px, 24vw, 130px); }
-  .spread-c--trio-tall .exhibit__media { height: clamp(110px, 30vw, 155px); }
-  .quiet-card__media { height: clamp(140px, 34vw, 200px); }
   .spread-e { --feature-h: clamp(220px, 56vw, 320px); }
   .spread-f { --hero-h: clamp(200px, 50vw, 300px); }
 }
