@@ -12,7 +12,7 @@
   --panel: #14140f;
   --text: #f2eee4;
   --muted: #a39c8d;
-  --muted-2: #756e60;
+  --muted-2: #938a79;
   --line: #2b2921;
   --line-soft: #1c1a15;
 
@@ -461,4 +461,17 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
   h1 { font-size: clamp(3rem, 16vw, 4.4rem); }
   .spread-e { --feature-h: clamp(220px, 56vw, 320px); }
   .spread-f { --hero-h: clamp(200px, 50vw, 300px); }
+}
+
+/* Short mobile viewports (e.g. 400x642): the reordered hero above puts SHERU
+   ahead of the name/role within the very first screen. Below this height,
+   restore natural document order — name/role/statement first — and trim the
+   object so identity clears the fold before SHERU, without shrinking SHERU
+   on taller phones or touching the desktop composition. */
+@media (max-width: 860px) and (max-height: 700px) {
+  .hero { padding-block: 1.8rem 2.2rem; }
+  .hero__object { order: 0; min-height: 0; margin-top: 1.8rem; margin-bottom: 0; }
+  .sheru-object { width: min(100%, 190px); }
+  .sheru-object img { width: min(100%, 170px); }
+  .sheru-object__tag { margin-top: .7rem; }
 }

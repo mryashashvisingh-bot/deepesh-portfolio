@@ -60,5 +60,5 @@ scripts/build.mjs          Portable static build to dist/
 
 ## Content placeholders to replace
 
-- Contact: Email, LinkedIn, Behance and final resume PDF.
+- Contact: Email, LinkedIn, Behance.
 - Portfolio media: SHERU hero/prototype/system assets, THiP social/video assets, Moh Zewar identity assets, afaqs! event visuals, Lone Wolf key visual, GeM/ISC/NLDS/Maate selected work.
