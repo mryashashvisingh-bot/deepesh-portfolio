@@ -445,6 +445,12 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
   .exhibit__media img, .exhibit__media video { width: 100%; height: auto; }
   .quiet-card__media { height: auto; }
   .quiet-card__media img { width: 100%; height: auto; }
+
+  /* Inter-project rhythm: .subsection's clamp() is vw-driven and bottoms out at its
+     2.4rem floor on any phone width, which read as barely-there once media became
+     full-width. Lock mobile to the same 3.4rem ceiling the desktop system already
+     uses at wide viewports, so separate works stay clearly distinct blocks. */
+  .subsection { margin-top: 3.4rem; padding-top: 3.4rem; }
 }
 
 @media (max-width: 480px) {
