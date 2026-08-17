@@ -96,6 +96,8 @@ const images = [
   { src: lib('03_Digitalabs/Isc/Isc.jpg'), slug: 'isc-main', widths: [700] },
   { src: lib('03_Digitalabs/Isc/Isc-Model.jpg'), slug: 'isc-model', widths: [420] },
   { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf-1.jpg'), slug: 'lone-wolf-cave', widths: [560] },
+  { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf-2.jpg'), slug: 'lone-wolf-register', widths: [560] },
+  { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf-3.jpg'), slug: 'lone-wolf-identity', widths: [560] },
   { src: lib('03_Digitalabs/Lone_Wolf/LOne-wolf-4.jpg'), slug: 'lone-wolf-forest', widths: [560] },
   { src: lib('03_Digitalabs/Maate/Maate-5.jpg'), slug: 'maate-coconut', widths: [700] },
   { src: lib('03_Digitalabs/Maate/Maate-1.jpg'), slug: 'maate-powder', widths: [420] },

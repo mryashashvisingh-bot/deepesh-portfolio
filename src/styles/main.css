@@ -228,6 +228,13 @@ p { margin: 0; }
    not just the wide-desktop max. */
 .spread-c--trio-wide .exhibit__media { height: clamp(105px, 12vw, 190px); }
 
+/* Three-item row, equal portrait/9:16 works (Smaaash): tall shared height reads as a deliberate
+   three-piece reel presentation. Centered as a group since three portrait cards at a height that
+   avoids looking cramped won't always reach the full container width — centering rather than
+   left-aligning (or stretching) reads as intentional. */
+.spread-c--trio-tall { justify-content: center; }
+.spread-c--trio-tall .exhibit__media { height: clamp(280px, 34vw, 460px); }
+
 /* E — dominant feature + stacked supporting pair (Smaaash): one tall featured video beside two
    smaller videos stacked in a column. The stack's total height tracks the feature's height via a
    custom property, so both sides read as one composition regardless of source aspect ratio —
@@ -241,16 +248,17 @@ p { margin: 0; }
 .spread-e__stack { flex: 0 0 auto; display: flex; flex-direction: column; gap: 1.1rem; }
 .spread-e__stack video, .spread-e__stack img { height: calc((var(--feature-h) - 1.1rem) / 2); width: auto; max-width: 100%; display: block; }
 
-/* F — hero + 2x2 grid (GeM): a large square hero beside four equal supporting squares. The grid
-   block's overall size tracks the hero's height via a custom property, so the two sides read as
-   one balanced composition. Only safe to use where the supporting set is uniformly square/near-
-   square — grid cells are natural aspect ratio (img width:100%, no cropping), not forced squares. */
+/* F — hero + 2x2 grid (GeM, Lone Wolf): a large square hero (image or video) beside four equal
+   supporting squares. The grid block's overall size tracks the hero's height via a custom
+   property, so the two sides read as one balanced composition. Only safe to use where the
+   supporting set is uniformly square/near-square — grid cells are natural aspect ratio (img
+   width:100%, no cropping), not forced squares. */
 .spread-f {
   --hero-h: clamp(320px, 34vw, 560px);
   display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(1.2rem, 2.6vw, 1.8rem);
 }
 .spread-f__hero { flex: 0 0 auto; }
-.spread-f__hero img { height: var(--hero-h); width: auto; max-width: 100%; display: block; }
+.spread-f__hero img, .spread-f__hero video { height: var(--hero-h); width: auto; max-width: 100%; display: block; }
 .spread-f__grid {
   flex: 0 0 auto; width: var(--hero-h); max-width: 100%;
   display: grid; grid-template-columns: 1fr 1fr; gap: clamp(.6rem, 1.2vw, 1rem);
@@ -416,7 +424,7 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
   /* E/F: stack fully — feature/hero on top, supporting media below, in reading order */
   .spread-e { flex-direction: column; }
   .spread-f { flex-direction: column; }
-  .spread-f__hero img { width: 100%; height: auto; }
+  .spread-f__hero img, .spread-f__hero video { width: 100%; height: auto; }
   .spread-f__grid { width: 100%; }
   .split { grid-template-columns: 1fr; }
 }
@@ -427,6 +435,7 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
   .spread-c--duo .exhibit__media { height: clamp(130px, 34vw, 180px); }
   .spread-c--trio .exhibit__media { height: clamp(120px, 30vw, 160px); }
   .spread-c--trio-wide .exhibit__media { height: clamp(90px, 24vw, 130px); }
+  .spread-c--trio-tall .exhibit__media { height: clamp(110px, 30vw, 155px); }
   .quiet-card__media { height: clamp(140px, 34vw, 200px); }
   .spread-e { --feature-h: clamp(220px, 56vw, 320px); }
   .spread-f { --hero-h: clamp(200px, 50vw, 300px); }
