@@ -110,6 +110,9 @@ const images = [
   { src: lib('02_Afaqs/Events/Buzzies/mailer-13.jpg'), slug: 'afaqs-buzzies', widths: [420] },
   { src: lib('02_Afaqs/Events/Digipub/01-08-2018-fb.jpg'), slug: 'afaqs-digipub', widths: [420] },
   { src: lib('02_Afaqs/Events/foxglove/mailer1.jpg'), slug: 'afaqs-foxglove', widths: [420] },
+
+  // ---- Phase 4: media-proportion correction pass — Metal third screen ----
+  { src: lib('04_Freelance/Metal/second.jpg'), slug: 'metal-second', widths: [420] },
 ];
 
 const posters = [
@@ -128,6 +131,11 @@ const posters = [
   { src: lib('02_Afaqs/Events/foxglove/what is foxglove2019.mp4'), slug: 'afaqs-foxglove', atSeconds: 3, width: 420 },
   { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', atSeconds: 2.5, width: 700 },
   { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', atSeconds: 2.5, width: 420 },
+
+  // ---- Phase 4: media-proportion correction pass — Maate + Moh Zewar motion work ----
+  { src: lib('03_Digitalabs/Maate/Maate-1.mp4'), slug: 'maate-brand', atSeconds: 4, width: 700 },
+  { src: lib('03_Digitalabs/Maate/Maate-2.mp4'), slug: 'maate-social', atSeconds: 1, width: 420 },
+  { src: lib('04_Freelance/Moh_Zewar/PreferredOne.mp4'), slug: 'moh-zewar-motion', atSeconds: 6, width: 700 },
 ];
 
 const clips = [
@@ -139,6 +147,11 @@ const clips = [
   { src: lib('02_Afaqs/Events/Digipub/Digipub-Awards.mp4'), slug: 'afaqs-digipub', width: 900 },
   { src: lib('02_Afaqs/Events/foxglove/what is foxglove2019.mp4'), slug: 'afaqs-foxglove', width: 640 },
   { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', width: 640 },
+
+  // ---- Phase 4: media-proportion correction pass — Maate + Moh Zewar motion work ----
+  { src: lib('03_Digitalabs/Maate/Maate-1.mp4'), slug: 'maate-brand', width: 700 },
+  { src: lib('03_Digitalabs/Maate/Maate-2.mp4'), slug: 'maate-social', width: 420 },
+  { src: lib('04_Freelance/Moh_Zewar/PreferredOne.mp4'), slug: 'moh-zewar-motion', width: 700 },
 ];
 
 for (const item of images) deriveImage(item);
