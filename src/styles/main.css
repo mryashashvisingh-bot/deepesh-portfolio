@@ -197,7 +197,10 @@ p { margin: 0; }
 .spread-b__primary img, .spread-b__secondary img { width: 100%; height: auto; }
 .spread-b__secondary { margin-top: clamp(2rem, 6vw, 4.5rem); }
 
-/* C — fragment / exhibit strip: shared media HEIGHT, natural WIDTH per asset's own aspect ratio */
+/* C — fragment / exhibit strip: shared media HEIGHT, natural WIDTH per asset's own aspect ratio.
+   Default tier suits 4–5 item rows (NLDS, Book Covers). Row-size modifiers below let a row with
+   fewer, larger works use more of the available width without ever stretching the artwork —
+   width is always intrinsic (height:100%; width:auto) so the tier only ever changes the shared HEIGHT. */
 .spread-c { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.1rem; }
 .exhibit {
   flex: 0 0 auto; display: flex; flex-direction: column;
@@ -210,11 +213,30 @@ p { margin: 0; }
 .exhibit figcaption {
   font-size: .76rem; color: var(--muted); padding: .55rem .15rem .15rem; letter-spacing: .02em;
 }
+.exhibit figcaption.figcaption--tag { color: var(--accent-2); font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+
+/* Two-item row: a pair of works sharing one row can run much taller and still fit comfortably. */
+.spread-c--duo { gap: clamp(1.4rem, 3vw, 2rem); }
+.spread-c--duo .exhibit__media { height: clamp(220px, 27vw, 390px); }
+
+/* Three-item row, square/near-square works (HDFC, GeM strip, Maate strip). */
+.spread-c--trio .exhibit__media { height: clamp(195px, 24vw, 330px); }
+
+/* Three-item row, landscape-leaning works (Metal, Moh Zewar) — shorter shared height so three
+   wide items still fit one row without wrapping or overflowing. The container itself steps down
+   at the 1280px breakpoint (1240px → 1080px), so these are tuned against that narrower figure,
+   not just the wide-desktop max. */
+.spread-c--trio-wide .exhibit__media { height: clamp(105px, 12vw, 190px); }
 
 /* D — quiet text-led card */
 .spread-d { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; }
 .quiet-card { border-top: 1px solid var(--line-soft); padding-top: 1.4rem; }
-.quiet-card img { width: 100%; height: auto; margin-bottom: 1rem; }
+.quiet-card__media {
+  height: clamp(180px, 20vw, 260px); margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--panel); border: 1px solid var(--line-soft);
+}
+.quiet-card__media img { height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; }
 .quiet-card h3 { margin-bottom: .4rem; }
 .quiet-card p { color: var(--muted); font-size: .96rem; }
 
@@ -366,4 +388,8 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
 @media (max-width: 480px) {
   h1 { font-size: clamp(3rem, 16vw, 4.4rem); }
   .exhibit__media { height: clamp(120px, 34vw, 170px); }
+  .spread-c--duo .exhibit__media { height: clamp(130px, 34vw, 180px); }
+  .spread-c--trio .exhibit__media { height: clamp(120px, 30vw, 160px); }
+  .spread-c--trio-wide .exhibit__media { height: clamp(90px, 24vw, 130px); }
+  .quiet-card__media { height: clamp(140px, 34vw, 200px); }
 }
