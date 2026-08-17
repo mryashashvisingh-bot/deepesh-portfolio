@@ -441,7 +441,11 @@ figcaption { color: var(--muted-2); font-size: .78rem; margin-top: .7rem; letter
      full-width vertical stack, width-driven with auto height. */
   .spread-c { flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
   .exhibit { width: 100%; }
-  .exhibit__media { height: auto; }
+  .exhibit__media,
+  .spread-c--duo .exhibit__media,
+  .spread-c--trio .exhibit__media,
+  .spread-c--trio-wide .exhibit__media,
+  .spread-c--trio-tall .exhibit__media { height: auto; }
   .exhibit__media img, .exhibit__media video { width: 100%; height: auto; }
   .quiet-card__media { height: auto; }
   .quiet-card__media img { width: 100%; height: auto; }
