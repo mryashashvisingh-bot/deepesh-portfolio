@@ -105,7 +105,8 @@ const images = [
   { src: lib('03_Digitalabs/NLDS/NLDS-2.jpg'), slug: 'nlds-corridor', widths: [500] },
 
   // ---- Phase 3B: afaqs! ----
-  { src: lib('02_Afaqs/mailer.jpg'), slug: 'afaqs-mailer', widths: [420] },
+  // afaqs-mailer (02_Afaqs/mailer.jpg) retired: general traffic-stat graphic,
+  // not tied to a specific event — excluded per Phase 3D visual audit.
   { src: lib('02_Afaqs/Events/Buzzies/mailer-13.jpg'), slug: 'afaqs-buzzies', widths: [420] },
   { src: lib('02_Afaqs/Events/Digipub/01-08-2018-fb.jpg'), slug: 'afaqs-digipub', widths: [420] },
   { src: lib('02_Afaqs/Events/foxglove/mailer1.jpg'), slug: 'afaqs-foxglove', widths: [420] },
@@ -116,11 +117,28 @@ const posters = [
   { src: lib('01_THIP/Video_Motion/Thip.mp4'), slug: 'thip', atSeconds: 6, width: 500 },
   { src: lib("03_Digitalabs/Smaaash/Go_Smaaash_women's day.mp4"), slug: 'smaaash', atSeconds: 45, width: 700 },
   { src: lib("03_Digitalabs/Smaaash/Go_Smaaash_women's day.mp4"), slug: 'smaaash', atSeconds: 45, width: 420 },
+
+  // ---- Phase 3D: afaqs! event videos ----
+  { src: lib('02_Afaqs/Events/Buzzies/buzzies2018.mp4'), slug: 'afaqs-buzzies', atSeconds: 4, width: 700 },
+  { src: lib('02_Afaqs/Events/Buzzies/buzzies2018.mp4'), slug: 'afaqs-buzzies', atSeconds: 4, width: 420 },
+  { src: lib('02_Afaqs/Events/Digipub/Digipub-Awards.mp4'), slug: 'afaqs-digipub', atSeconds: 30, width: 900 },
+  { src: lib('02_Afaqs/Events/Digipub/Digipub-Awards.mp4'), slug: 'afaqs-digipub', atSeconds: 30, width: 700 },
+  { src: lib('02_Afaqs/Events/Digipub/Digipub-Awards.mp4'), slug: 'afaqs-digipub', atSeconds: 30, width: 420 },
+  { src: lib('02_Afaqs/Events/foxglove/what is foxglove2019.mp4'), slug: 'afaqs-foxglove', atSeconds: 3, width: 700 },
+  { src: lib('02_Afaqs/Events/foxglove/what is foxglove2019.mp4'), slug: 'afaqs-foxglove', atSeconds: 3, width: 420 },
+  { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', atSeconds: 2.5, width: 700 },
+  { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', atSeconds: 2.5, width: 420 },
 ];
 
 const clips = [
   { src: lib('01_THIP/Video_Motion/Thip.mp4'), slug: 'thip', width: 560 },
   { src: lib("03_Digitalabs/Smaaash/Go_Smaaash_women's day.mp4"), slug: 'smaaash', width: 380 },
+
+  // ---- Phase 3D: afaqs! event videos ----
+  { src: lib('02_Afaqs/Events/Buzzies/buzzies2018.mp4'), slug: 'afaqs-buzzies', width: 640 },
+  { src: lib('02_Afaqs/Events/Digipub/Digipub-Awards.mp4'), slug: 'afaqs-digipub', width: 900 },
+  { src: lib('02_Afaqs/Events/foxglove/what is foxglove2019.mp4'), slug: 'afaqs-foxglove', width: 640 },
+  { src: lib('02_Afaqs/Events/vdonxt/vdonxt-tv-ad.mp4'), slug: 'afaqs-vdonxt', width: 640 },
 ];
 
 for (const item of images) deriveImage(item);
