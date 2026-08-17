@@ -82,8 +82,6 @@ const images = [
   { src: lib('04_Freelance/Book_Covers/dilkigirah.jpg'), slug: 'book-dilkigirah', widths: [340] },
   { src: lib('04_Freelance/Book_Covers/my-fm.jpg'), slug: 'book-myfm', widths: [340] },
   { src: lib('04_Freelance/Book_Covers/radio.jpg'), slug: 'book-radio', widths: [340] },
-  { src: lib('04_Freelance/Metal/first.jpg'), slug: 'metal-first', widths: [420] },
-  { src: lib('04_Freelance/Metal/third.jpg'), slug: 'metal-third', widths: [420] },
 
   // ---- Phase 3B: Digitalabs ----
   { src: lib('03_Digitalabs/GeM/GeM-Saras.jpg'), slug: 'gem-saras', widths: [900] },
@@ -112,9 +110,6 @@ const images = [
   { src: lib('02_Afaqs/Events/Buzzies/mailer-13.jpg'), slug: 'afaqs-buzzies', widths: [420] },
   { src: lib('02_Afaqs/Events/Digipub/01-08-2018-fb.jpg'), slug: 'afaqs-digipub', widths: [420] },
   { src: lib('02_Afaqs/Events/foxglove/mailer1.jpg'), slug: 'afaqs-foxglove', widths: [420] },
-
-  // ---- Phase 4: media-proportion correction pass — Metal third screen ----
-  { src: lib('04_Freelance/Metal/second.jpg'), slug: 'metal-second', widths: [420] },
 
   // ---- Phase 5: project composition refinement — GeM fourth supporting image ----
   { src: lib('03_Digitalabs/GeM/274720314_2935571260067565_7163978631895211480_n.jpg'), slug: 'gem-selfhelp', widths: [500] },
